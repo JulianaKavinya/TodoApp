@@ -12,6 +12,7 @@ Route::namespace('App\Http\Controllers')-> group(function () {
     Route::get('/services', 'PageController@services')->name ('services');
     Route::get('/products', 'PageController@products')->name ('products');
     Route::get('/gallery','PageController@gallery')->name ('gallery');
+    Route::get('/student/{adm}','PageController@student')->name ('student');
 
 
 });

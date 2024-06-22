@@ -32,4 +32,20 @@ class PageController extends Controller
     public function gallery(){
         return 'this is the gallery page';
     }
+
+
+public function student($adm){
+    $students = [
+        '123' => 'Dennis',
+        '567' => 'Stacy',
+        '456' => 'Lawrence',
+        '679' => 'Jackline',
+        '789' => 'Juliana'
+    ];
+    if(array_key_exists($adm, $students))
+    return $students[$adm];
+    else
+        return 'student:'. $adm. 'not found';
+  }
+
 }
