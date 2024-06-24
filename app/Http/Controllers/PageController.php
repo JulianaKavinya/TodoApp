@@ -46,6 +46,42 @@ public function student($adm){
     return $students[$adm];
     else
         return 'student:'. $adm. 'not found';
-  }
+}
 
+public function grade($marks){
+    $students = [
+        '43' => 'Dennis',
+        '50' => 'Stacy',
+        '30' => 'Lawrence',
+        '44' => 'Jackline',
+        '30' => 'Juliana'
+    ];
+
+  #calculateGrade ($marks);
+
+      if ($marks >= 46 && $marks <= 50) {
+          return 'A+';
+      } elseif ($marks >= 41 && $marks <= 45) {
+          return 'A';
+      } elseif ($marks >= 36 && $marks <= 40) {
+          return 'B+';
+      } elseif ($marks >= 31 && $marks <= 35) {
+          return 'B';
+      } elseif ($marks >= 26 && $marks <= 30) {
+          return 'C+';
+      } elseif ($marks >= 21 && $marks <= 25) {
+          return 'C';
+      } elseif ($marks >= 16 && $marks <= 20) {
+          return 'D+';
+      } elseif ($marks >= 11 && $marks <= 15) {
+          return 'D';
+      } elseif ($marks >= 6 && $marks <= 10) {
+          return 'E';
+      } else {
+          return 'F';
+      }
+      if(array_key_exists($marks, $students))
+      return $students[$marks];
+
+}
 }
